@@ -23,7 +23,7 @@ Continuously jam all wifi clients and access points within range. The effectiven
 
 ### Simple
 ``` shell
-$ git clone https://github.com/bhikandeshmukh/Wi-Fi-Jammer.git
+
 $ cd Wi-Fi-Jammer
 $ python wifijammer.py
 ```
@@ -37,7 +37,7 @@ python wifijammer.py -a 00:0E:DA:DE:24:8E -c 2
 ```
 
 Deauthenticate all devices with which 00:0E:DA:DE:24:8E communicates and skips channel hopping by setting the channel to the target AP's channel (2 in this case). This would mainly be an access point's MAC so all clients associated with that AP would be deauthenticated, but you can also put a client MAC here to target that one client and any other devices that communicate with it.
-
+md
 
 ### Advanced
 ```shell
@@ -51,7 +51,7 @@ python wifijammer.py -c 1 -p 5 -t .00001 -s DL:3D:8D:JJ:39:52 -d --world
 * `-t`, Set a time interval of .00001 seconds between sending each deauth (try this if you get a scapy error like 'no buffer space')
 
 * `-s`, Do not deauth the MAC DL:3D:8D:JJ:39:52. Ignoring a certain MAC address is handy in case you want to tempt people to join your access point in cases of wanting to use LANs.py or a Pineapple on them.
-
+md
 * `-d`, Do not send deauths to access points' broadcast address; this will speed up the deauths to the clients that are found
 
 * `--world`, Set the max channel to 13. In N. America the max channel standard is 11, but the rest of the world uses 13 channels so use this option if you're not in N. America
